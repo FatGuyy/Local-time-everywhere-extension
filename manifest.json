@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name" : "Local Time Everywhere",
+    "version" : "0.1.0",
+    "description" : "Converts all time to your local time",
+    "permissions" : [
+        "tabs",
+        "activeTab",
+        "background",
+        "storage"
+    ],
+    "background" :{
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Local Time Everywhere",
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["background.js"]
+        }
+    ]
+}
