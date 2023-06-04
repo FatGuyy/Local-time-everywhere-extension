@@ -5,9 +5,7 @@
     "description" : "Converts all time to your local time",
     "permissions" : [
         "tabs",
-        "activeTab",
-        "background",
-        "storage"
+        "activeTab"
     ],
     "background" :{
         "service_worker": "background.js"
@@ -15,11 +13,5 @@
     "action": {
         "default_title": "Local Time Everywhere",
         "default_popup": "index.html"
-    },
-    "content_scripts": [
-        {
-          "matches": ["<all_urls>"],
-          "js": ["background.js"]
-        }
-    ]
+    }
 }
